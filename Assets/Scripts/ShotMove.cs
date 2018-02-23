@@ -28,5 +28,16 @@ public class ShotMove : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
+        
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
