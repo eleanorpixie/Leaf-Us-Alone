@@ -8,11 +8,15 @@ public class HealthBar : MonoBehaviour {
 
     float startingHealth = 100;
     float currentHealth;
+    public Image healthBarImage;
 
     [SerializeField]
     private Slider slider;
 
+    [SerializeField]
     private Color fullColor = Color.green;
+
+    [SerializeField]
     private Color emptyColor = Color.red;
 
 	// Use this for initialization
@@ -20,11 +24,6 @@ public class HealthBar : MonoBehaviour {
         currentHealth = startingHealth;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     void CauseDamage(float amountOfDamage)
     {
         currentHealth -= amountOfDamage;
@@ -34,6 +33,6 @@ public class HealthBar : MonoBehaviour {
     private void SetSlider()
     {
         slider.value = currentHealth;
-
+        healthBarImage.color = Color.Lerp(emptyColor, fullColor, currentHealth / startingHealth);
     }
 }
