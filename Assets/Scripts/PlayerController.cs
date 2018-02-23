@@ -26,24 +26,68 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown("up"))
+        if (Input.GetKey("up"))
         {
-            rotateY = 0;
+            if (Input.GetKey("left"))
+            {
+                rotateY = 315;
+            }
+            else if (Input.GetKey("right"))
+            {
+                rotateY = 45;
+            }
+            else
+            {
+                rotateY = 0;
+            }
         }
 
-        if (Input.GetKeyDown("right"))
+        if (Input.GetKey("right"))
         {
-            rotateY = 90;
+            if (Input.GetKey("up"))
+            {
+                rotateY = 45;
+            }
+            else if (Input.GetKey("down"))
+            {
+                rotateY = 135;
+            }
+            else
+            {
+                rotateY = 90;
+            }
         }
 
-        if (Input.GetKeyDown("down"))
+        if (Input.GetKey("down"))
         {
-            rotateY = 180;
+            if (Input.GetKey("left"))
+            {
+                rotateY = 225;
+            }
+            else if (Input.GetKey("right"))
+            {
+                rotateY = 135;
+            }
+            else
+            {
+                rotateY = 180;
+            }
         }
 
-        if (Input.GetKeyDown("left"))
+        if (Input.GetKey("left"))
         {
-            rotateY = 270;
+            if (Input.GetKey("up"))
+            {
+                rotateY = 315;
+            }
+            else if (Input.GetKey("down"))
+            {
+                rotateY = 225;
+            }
+            else
+            {
+                rotateY = 270;
+            }
         }
 
         rotate.eulerAngles = new Vector3(0, rotateY, 0);
