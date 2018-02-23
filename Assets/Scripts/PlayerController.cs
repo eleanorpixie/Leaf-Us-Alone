@@ -13,21 +13,11 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-
+        gameObject.transform.rotation = rotate;
 	}
 
-    // Update is called once per frame
-    void FixedUpdate ()
+    private void Update()
     {
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 5.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 5.0f;
-
-        Rigidbody rb = GetComponent<Rigidbody>();
-
-        Vector3 move = new Vector3(x, 0, z);
-
-        rb.velocity = move * speed;
-
         if (Input.GetKeyDown("up"))
         {
             rotateY = 0;
@@ -55,5 +45,18 @@ public class PlayerController : MonoBehaviour {
         rotate.eulerAngles = new Vector3(0, rotateY, 0);
 
         gameObject.transform.rotation = rotate;
+    }
+
+    // Update is called once per frame
+    void FixedUpdate ()
+    {
+        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 5.0f;
+        var z = Input.GetAxis("Vertical") * Time.deltaTime * 5.0f;
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+
+        Vector3 move = new Vector3(x, 0, z);
+
+        rb.velocity = move * speed;
 	}
 }
