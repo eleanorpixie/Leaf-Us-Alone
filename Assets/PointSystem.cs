@@ -1,35 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< HEAD
-
-public class PointSystem : MonoBehaviour {
-
-    private int points = 0;
-    public int Points
-    {
-        get
-        {
-            return points;
-        }
-    }
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 
-=======
 using UnityEngine.UI;
 
 public class PointSystem : MonoBehaviour {
@@ -68,5 +41,5 @@ public class PointSystem : MonoBehaviour {
     {
         points += pointAmount;
     }
->>>>>>> 875be52f0f439b701a798ca7c717124641402264
+
 }
