@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        stop = true;
 
         lumberJack = GameObject.FindGameObjectWithTag("lumberjack1");
         termite = GameObject.FindGameObjectWithTag("termite1");
@@ -51,16 +52,19 @@ public class Enemy : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update ()
+	void LateUpdate ()
     {
-        StartCoroutine(MyCoroutine(hordeIncreaseTimeDelay));
+        if (stop == true)
+            StartCoroutine(MyCoroutine(hordeIncreaseTimeDelay));
+      
 	}
 
     IEnumerator MyCoroutine(int delay)
     {
+        stop = false;
         yield return new WaitForSeconds(delay);
             enemyHordeAmount += increaseAmount;
-            for (int i = 0; i < enemyHordeAmount; i++)
+            for (int l = 0; l < 7; ++l)
             {
                 System.Random rnd = new System.Random();
                 int ranType = rnd.Next(0, 4);
@@ -77,8 +81,8 @@ public class Enemy : MonoBehaviour {
                     o.GetComponent<Renderer>().enabled = true;
                     Console.WriteLine("termite");
                 }
-                break;
             }
+        stop = true;
     
     }
 }
