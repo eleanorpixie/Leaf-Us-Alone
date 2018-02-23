@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PointSystem : MonoBehaviour {
 
-    private int points = 0;
-    public int Points
+    private int points;
+    private int pointAmount;
+    public int Points//i think the only script that needs to change the point amount is this one...
     {
         get
         {
@@ -18,14 +19,13 @@ public class PointSystem : MonoBehaviour {
     }
 
 	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	void Start ()
+    {
+        points = 0;
 	}
 
-
+    void AddPoints()
+    {
+        points += pointAmount;
+    }
 }
