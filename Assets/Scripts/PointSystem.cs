@@ -8,7 +8,6 @@ public class PointSystem : MonoBehaviour {
     [SerializeField]
     private int pointAmount = 1;
 
-    [SerializeField]
     private Text text;
 
     private int points;
