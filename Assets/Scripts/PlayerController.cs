@@ -10,6 +10,14 @@ public class PlayerController : MonoBehaviour {
 
     private int rotateY;
 
+    [System.Serializable]
+    public class Boundary
+    {
+        public float xMin, xMax, zMin, zMax;
+    }
+
+    public Boundary boundary;
+
     // Use this for initialization
     void Start ()
     {
@@ -52,6 +60,13 @@ public class PlayerController : MonoBehaviour {
         Rigidbody rb = GetComponent<Rigidbody>();
 
         Vector3 move = new Vector3(x, 0, z);
+
+        rb.position = new Vector3
+        (
+            Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
+            0.5f,
+            Mathf.Clamp(rb.position.z, boundary.zMin, boundary.zMax)
+        );
 
         rb.velocity = move * speed;
 	}
