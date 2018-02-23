@@ -6,6 +6,10 @@ public class PlayerController : MonoBehaviour {
 
     public float speed = 50.0f;
 
+    private Quaternion rotate = Quaternion.identity;
+
+    private int rotateY;
+
     // Use this for initialization
     void Start ()
     {
@@ -18,35 +22,38 @@ public class PlayerController : MonoBehaviour {
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 5.0f;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * 5.0f;
 
-        var rotateZ = 0;
-
         Rigidbody rb = GetComponent<Rigidbody>();
 
         Vector3 move = new Vector3(x, 0, z);
-        Quaternion rotate = new Quaternion(0, 0, rotateZ, 0);
 
         rb.velocity = move * speed;
 
         if (Input.GetKeyDown("up"))
         {
-            rotateZ = 0;
+            rotateY = 0;
+            Debug.Log("Rotated North.");
         }
 
         if (Input.GetKeyDown("right"))
         {
-            rotateZ = 90;
+            rotateY = 90;
+            Debug.Log("Rotated East.");
         }
 
         if (Input.GetKeyDown("down"))
         {
-            rotateZ = 180;
+            rotateY = 180;
+            Debug.Log("Rotated South.");
         }
 
         if (Input.GetKeyDown("left"))
         {
-            rotateZ = 270;
+            rotateY = 270;
+            Debug.Log("Rotated West.");
         }
 
-        rb.transform.rotation = rotate;
+        rotate.eulerAngles = new Vector3(0, rotateY, 0);
+
+        gameObject.transform.rotation = rotate;
 	}
 }
