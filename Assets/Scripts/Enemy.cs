@@ -14,39 +14,41 @@ public class Enemy : MonoBehaviour {
 
     GameObject termite;
 
+    bool stop;
+
+
 	// Use this for initialization
 	void Start ()
     {
-        lumberJack = GameObject.FindGameObjectWithTag("lumberjack");
-        termite = GameObject.FindGameObjectWithTag("termite");
 
-        lumberJack.SetActive(false);
-        termite.SetActive(false);
+        lumberJack = GameObject.FindGameObjectWithTag("lumberjack1");
+        termite = GameObject.FindGameObjectWithTag("termite1");
+
+        lumberJack.GetComponent<Renderer>().enabled = false;
+
+        termite.GetComponent<Renderer>().enabled = false;
 
         enemyHordeAmount = 5;
 
-        hordeIncreaseTimeDelay = 20;
+        hordeIncreaseTimeDelay = 30;
 
         
 
-        for(int i = 0;i<enemyHordeAmount;i++)
-        {
-            for(int n = 0; n<3;n++)
+       
+            for(int n = 0; n < 3;n++)
             {
-                Instantiate(lumberJack);
-                this.gameObject.SetActive(true);
+                GameObject g = Instantiate(lumberJack);
+                g.GetComponent<Renderer>().enabled = true;
             }
 
             for (int k = 0; k < 2; k++)
             {
-                Instantiate(termite);
-                this.gameObject.SetActive(true);
+                GameObject o = Instantiate(termite);
+                o.GetComponent<Renderer>().enabled = true;
             }
 
-        }
 
-
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -57,23 +59,26 @@ public class Enemy : MonoBehaviour {
     IEnumerator MyCoroutine(int delay)
     {
         yield return new WaitForSeconds(delay);
-
-        enemyHordeAmount += increaseAmount;
-        for (int i = 0; i < increaseAmount; i++)
-        {
-            System.Random rnd = new System.Random();
-            int ranType = rnd.Next(1, 3);
-
-            if(ranType==1)
+            enemyHordeAmount += increaseAmount;
+            for (int i = 0; i < enemyHordeAmount; i++)
             {
-                Instantiate(lumberJack);
-                this.gameObject.SetActive(true);
+                System.Random rnd = new System.Random();
+                int ranType = rnd.Next(0, 4);
+
+                if (ranType == 1)
+                {
+                    GameObject g = Instantiate(lumberJack);
+                    g.GetComponent<Renderer>().enabled = true;
+                    Console.WriteLine("lumberjack");
+                }
+                else if (ranType == 2)
+                {
+                    GameObject o = Instantiate(termite);
+                    o.GetComponent<Renderer>().enabled = true;
+                    Console.WriteLine("termite");
+                }
+                break;
             }
-            else if(ranType==2)
-            {
-                Instantiate(termite);
-                this.gameObject.SetActive(true);
-            }
-        }
+    
     }
 }
