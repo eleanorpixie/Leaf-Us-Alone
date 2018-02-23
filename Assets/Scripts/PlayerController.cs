@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
     [System.Serializable]
     public class Boundary
     {
-        public float xMin, xMax, zMin, zMax;
+        public float xMin, xMax, zMin, zMax, playerHeight;
     }
 
     public Boundary boundary;
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour {
         rb.position = new Vector3
         (
             Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
-            0.5f,
+            boundary.playerHeight,
             Mathf.Clamp(rb.position.z, boundary.zMin, boundary.zMax)
         );
 

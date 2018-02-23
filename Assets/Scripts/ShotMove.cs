@@ -34,7 +34,7 @@ public class ShotMove : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "termite1" || other.gameObject.tag == "lumberjack1")
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
