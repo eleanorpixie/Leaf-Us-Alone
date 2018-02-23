@@ -21,25 +21,21 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown("up"))
         {
             rotateY = 0;
-            Debug.Log("Rotated North.");
         }
 
         if (Input.GetKeyDown("right"))
         {
             rotateY = 90;
-            Debug.Log("Rotated East.");
         }
 
         if (Input.GetKeyDown("down"))
         {
             rotateY = 180;
-            Debug.Log("Rotated South.");
         }
 
         if (Input.GetKeyDown("left"))
         {
             rotateY = 270;
-            Debug.Log("Rotated West.");
         }
 
         rotate.eulerAngles = new Vector3(0, rotateY, 0);
