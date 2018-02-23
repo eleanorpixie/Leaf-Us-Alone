@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour {
     public int enemyHordeAmount;
@@ -16,10 +17,18 @@ public class Enemy : MonoBehaviour {
 
     bool stop;
 
+    [SerializeField]
+    private Transform destination;
+    private NavMeshAgent enemy;
 
-	// Use this for initialization
-	void Start ()
+
+    // Use this for initialization
+    void Start ()
     {
+        enemy = GetComponent<NavMeshAgent>();
+        enemy.destination = destination.position;
+        
+        
         stop = true;
 
         lumberJack = GameObject.FindGameObjectWithTag("lumberjack1");
@@ -29,24 +38,20 @@ public class Enemy : MonoBehaviour {
 
         termite.GetComponent<Renderer>().enabled = false;
 
-        enemyHordeAmount = 5;
 
-        hordeIncreaseTimeDelay = 30;
+        for (int n = 0; n < 3; n++)
+        {
+            enemy = GetComponent<NavMeshAgent>();
+            GameObject g = Instantiate(lumberJack);
+            
+            g.GetComponent<Renderer>().enabled = true;
+        }
 
-        
-
-       
-            for(int n = 0; n < 3;n++)
-            {
-                GameObject g = Instantiate(lumberJack);
-                g.GetComponent<Renderer>().enabled = true;
-            }
-
-            for (int k = 0; k < 2; k++)
-            {
-                GameObject o = Instantiate(termite);
-                o.GetComponent<Renderer>().enabled = true;
-            }
+        for (int k = 0; k < 2; k++)
+        {
+            GameObject o = Instantiate(termite);
+            o.GetComponent<Renderer>().enabled = true;
+        }
 
 
     }
