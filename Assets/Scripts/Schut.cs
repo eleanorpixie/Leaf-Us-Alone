@@ -25,7 +25,6 @@ public class Schut : MonoBehaviour {
 		if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
             animAttack.SetBool("IsAttacking", true);
-            SoundManager.ShotSount();
             nextFire = Time.time + fireRate;
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
             animAttack.SetBool("IsAttacking", false);
