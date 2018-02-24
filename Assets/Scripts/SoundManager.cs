@@ -61,7 +61,7 @@ public class SoundManager : MonoBehaviour {
 
     void LumberJack()
     {
-        lumberjack.Play();
+        lumberjack.PlayOneShot(_lumberJackClip);
     }
 
     void Termite()
