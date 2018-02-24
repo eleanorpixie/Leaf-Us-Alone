@@ -112,10 +112,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  minValueX: -50
-  minValueZ: -50
-  maxValueX: 50
-  maxValueZ: 50
+  minValueX: -100
+  minValueZ: -100
+  maxValueX: 100
+  maxValueZ: 100
 --- !u!136 &136139873716139904
 CapsuleCollider:
   m_ObjectHideFlags: 1
