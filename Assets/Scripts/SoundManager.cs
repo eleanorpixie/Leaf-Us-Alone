@@ -26,6 +26,7 @@ public class SoundManager : MonoBehaviour {
 
     bool firstSound = true;
     bool secondSound = false;
+    bool play;
 
     public int playerSoundDelay;
 
@@ -41,6 +42,8 @@ public class SoundManager : MonoBehaviour {
         termite = _termite.GetComponent<AudioSource>();
 
         shotClip1 = shotClip;
+
+        play = true;
 		
 	}
 	
@@ -56,17 +59,22 @@ public class SoundManager : MonoBehaviour {
             Termite();
         }
 
-        StartCoroutine(PlayerSound());
+        if (play == true)
+        {
+            StartCoroutine(PlayerSound());
+        }
     }
 
     void LumberJack()
     {
-        lumberjack.PlayOneShot(_lumberJackClip);
+        lumberjack.Play();
+        //lumberjack.PlayOneShot(_lumberJackClip);
     }
 
     void Termite()
     {
-        termite.PlayOneShot(_termiteClip);
+        termite.Play();
+        //termite.PlayOneShot(_termiteClip);
     }
 
     public static void ShotSound()
@@ -76,10 +84,13 @@ public class SoundManager : MonoBehaviour {
 
     IEnumerator PlayerSound ()
     {
+        play = false;
         yield return new WaitForSeconds(playerSoundDelay);
-        if(firstSound==true)
+        if (firstSound == true)
         {
-            playerSound.PlayOneShot(playerClip);
+            Debug.Log(playerSound.isPlaying);
+            playerSound.Play();
+            // playerSound.PlayOneShot(playerClip);
             firstSound = false;
             secondSound = true;
         }
@@ -89,5 +100,6 @@ public class SoundManager : MonoBehaviour {
             firstSound = true;
             secondSound = false;
         }
+        play = true;
     }
 }
