@@ -4,47 +4,30 @@ using UnityEngine;
 
 public class CameraFade : MonoBehaviour
 {
-    private float alphaStart = 1f;
-    private float alphaEnd = 0.2f;
-    private float duration = 1f;
+    [SerializeField] private Material toonMaterial;
+    [SerializeField] private Material transparentMaterial;
+
+    [HideInInspector] public bool CameraColliding;
+    [HideInInspector] public bool PlayerColliding;
 
     private Renderer rend;
-
-    private bool isColliding;
 
     private void Start()
     {
         rend = GetComponent<Renderer>();
-        isColliding = false;
+        CameraColliding = false;
+        PlayerColliding = false;
     }
 
     private void Update()
     {
-        float lerp = Mathf.PingPong(Time.time, duration) / duration;
-
-        if (isColliding)
+        if (CameraColliding || PlayerColliding)
         {
-            //rend.material.color = new Color(255, 255, 255, 100);
+            rend.material = transparentMaterial;
         }
         else
         {
-            //rend.material.color = new Color(255, 255, 255, 255);
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "MainCamera")
-        {
-            isColliding = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "MainCamera")
-        {
-            isColliding = false;
+            rend.material = toonMaterial;
         }
     }
 }
