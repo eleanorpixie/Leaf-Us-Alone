@@ -15,16 +15,21 @@ public class TurretPlacementArea : MonoBehaviour {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
     }
-    void OnMouseDown()
-    {
-        if (turret != null)
-        {
-            Debug.Log("Cannot build turret here");
-            return;
-        }
 
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+    
+    void OnMouseOver()
+    {
+        if (Input.GetButtonDown("PlaceTurret"))
+        {
+            if (turret != null)
+            {
+                Debug.Log("Cannot build turret here");
+                return;
+            }
+
+            GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+            turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+        }
     }
     void OnMouseEnter()
     {
