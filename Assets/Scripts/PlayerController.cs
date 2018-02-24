@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour {
 
     //private float moveX;
     //private float moveZ;
+
+    private SpriteRenderer spriteRenderer;
     
 
 
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour {
 
         anim = GetComponent<Animator>();
         playerRigidBody = GetComponent<Rigidbody>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
     private void Update()
@@ -67,6 +70,15 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetAxis("Horizontal") > 0.1 || Input.GetAxis("Horizontal") < -0.1 || Input.GetAxis("Vertical") > 0.1 || Input.GetAxis("Vertical") < -0.1)
         {
             anim.SetBool("IsMoving", true);
+
+            if (Input.GetAxis("Horizontal") > 0.1)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (Input.GetAxis("Horizontal") < -0.1)
+            {
+                spriteRenderer.flipX = false;
+            }
         }
         else
             anim.SetBool("IsMoving", false);
