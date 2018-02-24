@@ -12,6 +12,7 @@ public class ShotMove : MonoBehaviour {
     public float maxValueX;
     public float maxValueZ;
 
+    public new static string tag;
 
 	// Use this for initialization
 	void Start ()
@@ -35,10 +36,12 @@ public class ShotMove : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if ( other.gameObject.tag == "lumberjack1"|| other.gameObject.tag == "termite1")
+        if (other.gameObject.tag == "lumberjack1" || other.gameObject.tag == "termite1")
         {
-                PointSystem.AddPoints(10);
-           
+            tag = other.gameObject.tag;
+
+            PointSystem.AddPoints(10);
+
             if (PointSystem.points >= 1500)
             {
                 //Winning scene name, change as needed
