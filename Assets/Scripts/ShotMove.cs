@@ -40,9 +40,9 @@ public class ShotMove : MonoBehaviour {
         {
             tag = other.gameObject.tag;
 
-            PointSystem.AddPoints(10);
+            PointSystem.AddPoints(5);
 
-            if (PointSystem.points >= 1500)
+            if (PointSystem.points >= 1000)
             {
                 //Winning scene name, change as needed
                 SceneManager.LoadScene("Win");
