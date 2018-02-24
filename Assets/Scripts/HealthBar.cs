@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour {
 
@@ -48,12 +47,6 @@ public class HealthBar : MonoBehaviour {
         //    StopCoroutine("DmgEverySecond");
             
         //}
-
-		if (currentHealth <= 0) 
-		{
-			//Place holder for gameover scene
-			SceneManager.LoadScene ("GameOver");
-		}
     }
 
     IEnumerator DmgEverySecond()
