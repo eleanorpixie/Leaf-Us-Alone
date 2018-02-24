@@ -35,25 +35,20 @@ public class ShotMove : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if ( other.gameObject.tag == "lumberjack1")
+        if ( other.gameObject.tag == "lumberjack1"|| other.gameObject.tag == "termite1")
         {
-            PointSystem.AddPoints(10);
+            if (other.gameObject.tag == "lumberjack1")
+                PointSystem.AddPoints(10);
+            else if (other.gameObject.tag == "termite1")
+                PointSystem.AddPoints(5);
+
             if (PointSystem.points >= 1500)
             {
                 //Winning scene name, change as needed
                 SceneManager.LoadScene("Win");
             }
-            Destroy(other);
-        }
-        if(other.gameObject.tag == "termite1")
-        {
-            PointSystem.AddPoints(5);
-            if (PointSystem.points >= 1500)
-            {
-                //Winning scene name, change as needed
-                SceneManager.LoadScene("Win");
-            }
-            Destroy(other);
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }
