@@ -128,7 +128,7 @@ public class Enemy : MonoBehaviour {
             {
 
                 System.Random rng = new System.Random();
-                Thread.Sleep(200);
+                Thread.Sleep(100);
                 int ranType1 = rng.Next(0, 4);
 
                 GameObject g = Instantiate(lumberJack);
@@ -143,7 +143,7 @@ public class Enemy : MonoBehaviour {
             else if (ranType == 2)
             {
                 System.Random rng = new System.Random();
-                Thread.Sleep(200);
+                Thread.Sleep(100);
                 int ranType1 = rng.Next(0, 4);
 
                 GameObject g = Instantiate(termite);
