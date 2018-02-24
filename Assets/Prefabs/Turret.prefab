@@ -258,7 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   range: 15
-  fireRate: 1
+  fireRate: 5
   enemyTag1: lumberjack1
   enemyTag2: termite1
   partToRotate: {fileID: 4588476309491786}
