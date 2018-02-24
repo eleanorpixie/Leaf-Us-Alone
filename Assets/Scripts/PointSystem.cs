@@ -11,11 +11,11 @@ public class PointSystem : MonoBehaviour {
 
     public static int points;
 
-    public int iPointsTemp = points;
+    public int iPointsTemp;
 
     private void Awake()
     {
-        text = GetComponent<Text>();
+        //text = GetComponent<Text>();
         DontDestroyOnLoad(this);
     }
 
@@ -26,8 +26,8 @@ public class PointSystem : MonoBehaviour {
 	}
     private void Update()
     {
+        iPointsTemp = points;
         text.text = "Points: " + iPointsTemp;
-
 
     }
 
