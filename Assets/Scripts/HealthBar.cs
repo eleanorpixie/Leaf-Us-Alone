@@ -24,7 +24,7 @@ public class HealthBar : MonoBehaviour {
         currentHealth = startingHealth;
 	}
 	
-    void CauseDamage(float amountOfDamage)
+    public void CauseDamage(float amountOfDamage)
     {
         currentHealth -= amountOfDamage;
         SetSlider();
