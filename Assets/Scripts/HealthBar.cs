@@ -49,11 +49,10 @@ public class HealthBar : MonoBehaviour {
             
         //}
 
-		if (currentHealth <= 0) 
-		{
-			//Place holder for gameover scene
-			SceneManager.LoadScene ("GameOver");
-		}
+        if(currentHealth<=0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     IEnumerator DmgEverySecond()
