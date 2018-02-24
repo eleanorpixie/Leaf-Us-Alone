@@ -68,18 +68,16 @@ public class SoundManager : MonoBehaviour {
     void LumberJack()
     {
         lumberjack.Play();
-        //lumberjack.PlayOneShot(_lumberJackClip);
     }
 
     void Termite()
     {
         termite.Play();
-        //termite.PlayOneShot(_termiteClip);
     }
 
     public static void ShotSound()
     {
-        shotSound1.PlayOneShot(shotClip1);
+        shotSound1.Play();
     }
 
     IEnumerator PlayerSound ()
@@ -88,15 +86,13 @@ public class SoundManager : MonoBehaviour {
         yield return new WaitForSeconds(playerSoundDelay);
         if (firstSound == true)
         {
-            Debug.Log(playerSound.isPlaying);
             playerSound.Play();
-            // playerSound.PlayOneShot(playerClip);
             firstSound = false;
             secondSound = true;
         }
         else if (secondSound == true)
         {
-            playerSound1.PlayOneShot(playerClip1);
+            playerSound1.Play();
             firstSound = true;
             secondSound = false;
         }
