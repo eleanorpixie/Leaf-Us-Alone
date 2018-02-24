@@ -26,13 +26,13 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKey("up"))
+        if (Input.GetKey("up") || Input.GetKey("w"))
         {
-            if (Input.GetKey("left"))
+            if (Input.GetKey("left") || Input.GetKey("a"))
             {
                 rotateY = 315;
             }
-            else if (Input.GetKey("right"))
+            else if (Input.GetKey("right") || Input.GetKey("d"))
             {
                 rotateY = 45;
             }
@@ -42,13 +42,13 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey("right"))
+        if (Input.GetKey("right") || Input.GetKey("d"))
         {
-            if (Input.GetKey("up"))
+            if (Input.GetKey("up") || Input.GetKey("w"))
             {
                 rotateY = 45;
             }
-            else if (Input.GetKey("down"))
+            else if (Input.GetKey("down") || Input.GetKey("s"))
             {
                 rotateY = 135;
             }
@@ -58,13 +58,13 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey("down"))
+        if (Input.GetKey("down") || Input.GetKey("s"))
         {
-            if (Input.GetKey("left"))
+            if (Input.GetKey("left") || Input.GetKey("a"))
             {
                 rotateY = 225;
             }
-            else if (Input.GetKey("right"))
+            else if (Input.GetKey("right") || Input.GetKey("d"))
             {
                 rotateY = 135;
             }
@@ -74,13 +74,13 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey("left"))
+        if (Input.GetKey("left") || Input.GetKey("a"))
         {
-            if (Input.GetKey("up"))
+            if (Input.GetKey("up") || Input.GetKey("w"))
             {
                 rotateY = 315;
             }
-            else if (Input.GetKey("down"))
+            else if (Input.GetKey("down") || Input.GetKey("s"))
             {
                 rotateY = 225;
             }
