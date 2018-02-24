@@ -393,7 +393,7 @@ MonoBehaviour:
   playerClip1: {fileID: 8300000, guid: 0ef5318d82167324b8711a9b9d7e6a4e, type: 3}
   _lumberJackClip: {fileID: 8300000, guid: 7fbfcf31e0135824297ebca12b8aa5cd, type: 3}
   _termiteClip: {fileID: 8300000, guid: 49db5d3fb2ecd444aaa29a720a52e60f, type: 3}
-  playerSoundDelay: 2
+  playerSoundDelay: 5
 --- !u!4 &147277079
 Transform:
   m_ObjectHideFlags: 0
@@ -2739,6 +2739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 887325921}
   billboardMode: 1
+<<<<<<< HEAD
 --- !u!1 &1247067135
 GameObject:
   m_ObjectHideFlags: 0
@@ -2831,6 +2832,8 @@ Transform:
 <<<<<<< HEAD
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of c8b301d... scenes
 --- !u!1001 &1284914475
 =======
   m_RootOrder: 22
@@ -3519,13 +3522,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7fbfcf31e0135824297ebca12b8aa5cd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.034
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 90
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4325,6 +4328,18 @@ Prefab:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 887325921}
+    - target: {fileID: 4445140375285528, guid: e1b29e89e68f7384094e372009f3bb57, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4445140375285528, guid: e1b29e89e68f7384094e372009f3bb57, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4445140375285528, guid: e1b29e89e68f7384094e372009f3bb57, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1b29e89e68f7384094e372009f3bb57, type: 2}
   m_IsPrefabParent: 0
