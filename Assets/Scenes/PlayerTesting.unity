@@ -3463,28 +3463,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: -9.314, z: 0}
---- !u!1 &1688788204 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1554083322832436, guid: e1b29e89e68f7384094e372009f3bb57,
-    type: 2}
-  m_PrefabInternal: {fileID: 2067398515}
---- !u!95 &1688788211
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1688788204}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1717290458 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4038317096018432, guid: a5a612c6d410bea4e82e2ef4346cf410,
@@ -4069,25 +4047,17 @@ Prefab:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 887325921}
-    - target: {fileID: 1554083322832436, guid: e1b29e89e68f7384094e372009f3bb57, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4445140375285528, guid: e1b29e89e68f7384094e372009f3bb57, type: 2}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4445140375285528, guid: e1b29e89e68f7384094e372009f3bb57, type: 2}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4445140375285528, guid: e1b29e89e68f7384094e372009f3bb57, type: 2}
       propertyPath: m_LocalScale.z
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1554083322832436, guid: e1b29e89e68f7384094e372009f3bb57, type: 2}
-      propertyPath: m_TagString
-      value: termite1
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1b29e89e68f7384094e372009f3bb57, type: 2}
