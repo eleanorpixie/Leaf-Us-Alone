@@ -37,9 +37,11 @@ public class ShotMove : MonoBehaviour {
     {
         if ( other.gameObject.tag == "lumberjack1"|| other.gameObject.tag == "termite1")
         {
-                PointSystem.AddPoints(10);
-           
-            if (PointSystem.points >= 1500)
+            tag = other.gameObject.tag;
+
+            PointSystem.AddPoints(5);
+
+            if (PointSystem.points >= 1000)
             {
                 //Winning scene name, change as needed
                 SceneManager.LoadScene("Win");
