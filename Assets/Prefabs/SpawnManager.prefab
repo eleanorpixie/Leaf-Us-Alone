@@ -52,5 +52,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHordeAmount: 5
-  hordeIncreaseTimeDelay: 0
+  hordeIncreaseTimeDelay: 20
   increaseAmount: 2
+  Spawn: []
+  Destination: []
+  spawnPoint: {fileID: 0}
+  destination: {fileID: 0}
+  spawnPoint1: {fileID: 0}
+  destination1: {fileID: 0}
+  spawnPoint2: {fileID: 0}
+  destination2: {fileID: 0}
+  spawnPoint3: {fileID: 0}
+  destination3: {fileID: 0}

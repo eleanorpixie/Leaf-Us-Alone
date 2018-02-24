@@ -40,6 +40,8 @@ public class Enemy : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        stop = true;
+
         Spawn.Add(spawnPoint);
         Destination.Add(destination);
 
@@ -53,8 +55,6 @@ public class Enemy : MonoBehaviour {
         Destination.Add(destination3);
         
         
-        stop = true;
-
         lumberJack = GameObject.FindGameObjectWithTag("lumberjack1");
         
         termite = GameObject.FindGameObjectWithTag("termite1");
@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour {
         {
             System.Random rnd = new System.Random();
             Thread.Sleep(200);
-            int ranType2 = rnd.Next(0, 3);
+            int ranType2 = rnd.Next(0, 4);
 
             GameObject g = Instantiate(lumberJack);
             enemy = g.GetComponent<NavMeshAgent>();
@@ -87,7 +87,7 @@ public class Enemy : MonoBehaviour {
         {
             System.Random rnd = new System.Random();
             Thread.Sleep(200);
-            int ranType1 = rnd.Next(0, 3);
+            int ranType1 = rnd.Next(0, 4);
 
             GameObject g = Instantiate(termite);
             enemy = g.GetComponent<NavMeshAgent>();
@@ -113,50 +113,50 @@ public class Enemy : MonoBehaviour {
     IEnumerator MyCoroutine(int delay)
     {
         stop = false;
-        yield return new WaitForSeconds(delay);
-            /*enemyHordeAmount += increaseAmount;
-            for (int l = 0; l < 7; ++l)
-            {
-                System.Random rnd = new System.Random();
-                int ranType = rnd.Next(0, 4);
 
-                if (ranType == 1)
-                {
-                enemy = GetComponent<NavMeshAgent>();
+        yield return new WaitForSeconds(delay);
+
+        enemyHordeAmount += increaseAmount;
+
+        for (int l = 0; l < 7; ++l)
+        {
+            System.Random rnd = new System.Random();
+            Thread.Sleep(200);
+            int ranType = rnd.Next(1, 3);
+
+            if (ranType == 1)
+            {
+
+                System.Random rng = new System.Random();
+                Thread.Sleep(200);
+                int ranType1 = rng.Next(0, 4);
+
                 GameObject g = Instantiate(lumberJack);
-                switch (ranType)
-                {
-                    case 0:
-                        g.transform.position = Spawn[0].position;
-                        g.GetComponent<Renderer>().enabled = true;
-                        break;
-                    case 1:
-                        g.transform.position = Spawn[1].position;
-                        g.GetComponent<Renderer>().enabled = true;
-                        break;
-                    case 2:
-                        g.transform.position = Spawn[2].position;
-                        g.GetComponent<Renderer>().enabled = true;
-                        break;
-                    case 3:
-                        g.transform.position = Spawn[3].position;
-                        g.GetComponent<Renderer>().enabled = true;
-                        break;
-                    default:
-                        g.transform.position = Spawn[0].position;
-                        g.GetComponent<Renderer>().enabled = true;
-                        break;
-                }
+                enemy = g.GetComponent<NavMeshAgent>();
+
+
+                enemy.Warp(Spawn[ranType1].position);
+                enemy.destination = Destination[ranType1].position;
+                g.GetComponent<Renderer>().enabled = true;
+
             }
-                else if (ranType == 2)
-                {
-                    GameObject o = Instantiate(termite);
-                    o.GetComponent<Renderer>().enabled = true;
-                    Console.WriteLine("termite");
-                }
+            else if (ranType == 2)
+            {
+                System.Random rng = new System.Random();
+                Thread.Sleep(200);
+                int ranType1 = rng.Next(0, 4);
+
+                GameObject g = Instantiate(termite);
+                enemy = g.GetComponent<NavMeshAgent>();
+
+
+                enemy.Warp(Spawn[ranType1].position);
+                enemy.destination = Destination[ranType1].position;
+                g.GetComponent<Renderer>().enabled = true;
             }
-        stop = true;
-        */
+        }
+    stop = true;
     
+
     }
 }
