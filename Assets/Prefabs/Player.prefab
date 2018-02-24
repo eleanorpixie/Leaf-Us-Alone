@@ -155,10 +155,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 80
   boundary:
-    xMin: -80
-    xMax: 80
-    zMin: -80
-    zMax: 80
+    xMin: -40
+    xMax: 40
+    zMin: -40
+    zMax: 40
     playerHeight: 1.5
 --- !u!114 &114536293146368178
 MonoBehaviour:
