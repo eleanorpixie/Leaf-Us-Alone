@@ -4,13 +4,90 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
+    public GameObject shot;
+    public GameObject player;
+    public GameObject player1;
+    public GameObject _lumberJack;
+    public GameObject _termite;
+
+    public AudioClip shotClip;
+    public static AudioClip shotClip1;
+    public AudioClip playerClip;
+    public AudioClip playerClip1;
+    public AudioClip _lumberJackClip;
+    public AudioClip _termiteClip;
+
+    AudioSource shotSound;
+    public static AudioSource shotSound1;
+    AudioSource playerSound;
+    AudioSource playerSound1;
+    AudioSource lumberjack;
+    AudioSource termite;
+
+    bool firstSound = true;
+    bool secondSound = false;
+
+    public int playerSoundDelay;
+
+
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
+        shotSound = shot.GetComponent<AudioSource>();
+        shotSound1 = shotSound;
+        playerSound = player.GetComponent<AudioSource>();
+        playerSound1 = player1.GetComponent<AudioSource>();
+        lumberjack = _lumberJack.GetComponent<AudioSource>();
+        termite = _termite.GetComponent<AudioSource>();
+
+        shotClip1 = shotClip;
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        if(HealthBar.causeDamage==true)
+        {
+            LumberJack();
+        }
+        if(HealthBar.causeDamage == true)
+        {
+            Termite();
+        }
+
+        StartCoroutine(PlayerSound());
+    }
+
+    void LumberJack()
+    {
+        lumberjack.Play();
+    }
+
+    void Termite()
+    {
+        termite.PlayOneShot(_termiteClip);
+    }
+
+    public static void ShotSound()
+    {
+        shotSound1.PlayOneShot(shotClip1);
+    }
+
+    IEnumerator PlayerSound ()
+    {
+        yield return new WaitForSeconds(playerSoundDelay);
+        if(firstSound==true)
+        {
+            playerSound.PlayOneShot(playerClip);
+            firstSound = false;
+            secondSound = true;
+        }
+        else if (secondSound == true)
+        {
+            playerSound1.PlayOneShot(playerClip1);
+            firstSound = true;
+            secondSound = false;
+        }
+    }
 }
