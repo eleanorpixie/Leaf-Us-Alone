@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShotMove : MonoBehaviour {
 
@@ -34,10 +35,25 @@ public class ShotMove : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "termite1" || other.gameObject.tag == "lumberjack1")
+        if ( other.gameObject.tag == "lumberjack1")
         {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+            PointSystem.AddPoints(10);
+            if (PointSystem.points >= 1500)
+            {
+                //Winning scene name, change as needed
+                SceneManager.LoadScene("Win");
+            }
+            Destroy(other);
+        }
+        if(other.gameObject.tag == "termite1")
+        {
+            PointSystem.AddPoints(5);
+            if (PointSystem.points >= 1500)
+            {
+                //Winning scene name, change as needed
+                SceneManager.LoadScene("Win");
+            }
+            Destroy(other);
         }
     }
 }

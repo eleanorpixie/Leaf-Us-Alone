@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 54765574491818026}
   - component: {fileID: 65827247134772188}
   - component: {fileID: 195219741502202482}
+  - component: {fileID: 114090579661089952}
   m_Layer: 0
   m_Name: Termite
   m_TagString: termite1
@@ -70,6 +71,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.3, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114090579661089952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1554083322832436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa781562611da6f4fb1fcb9c291b4455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  billboardMode: 1
 --- !u!195 &195219741502202482
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -78,7 +92,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1554083322832436}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.01
+  m_Radius: 0.1
   m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50

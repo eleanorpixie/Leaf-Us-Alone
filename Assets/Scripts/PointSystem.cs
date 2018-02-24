@@ -9,7 +9,10 @@ public class PointSystem : MonoBehaviour {
     [SerializeField]
     private Text text;
 
-    private int points;
+    public static int points;
+
+    public int iPointsTemp = points;
+
     private void Awake()
     {
         text = GetComponent<Text>();
@@ -23,11 +26,13 @@ public class PointSystem : MonoBehaviour {
 	}
     private void Update()
     {
-        text.text = "Points: " + points;
+        text.text = "Points: " + iPointsTemp;
+
+
     }
 
-    public void AddPoints(int pointamount)
-    {
+    public static void AddPoints(int pointamount)
+    { 
         points += pointamount;
     }
 }
