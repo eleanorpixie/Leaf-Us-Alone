@@ -14,14 +14,6 @@ public class PLayerRotationOnShot : MonoBehaviour {
     }
 
     public Boundary boundary;
-    
-    public Camera camera;
-    public float speed;
-    
-    private Vector3 mousePosition;
-    private Vector3 direction;
-    private float distanceFromObject;
-
 
     // Use this for initialization
     void Start()
@@ -30,7 +22,7 @@ public class PLayerRotationOnShot : MonoBehaviour {
     }
     private void Update()
     {
-        /*if (Input.GetKey("up") || Input.GetKey("w"))
+        if (Input.GetKey("up") || Input.GetKey("w"))
         {
             if (Input.GetKey("left") || Input.GetKey("a"))
             {
@@ -92,15 +84,10 @@ public class PLayerRotationOnShot : MonoBehaviour {
             {
                 rotateY = 270;
             }
-        }*/
+        }
 
-        mousePosition = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y - camera.transform.position.y, Input.mousePosition.z));
+        rotate.eulerAngles = new Vector3(0, rotateY, 0);
 
-        //rotate.eulerAngles = new Vector3(0, rotateY, 0);
-
-
-        gameObject.transform.eulerAngles = new Vector3(0, Mathf.Atan2((mousePosition.z - transform.position.z), (mousePosition.x - transform.position.x))* Mathf.Rad2Deg - 90);
-
-        
+        gameObject.transform.rotation = rotate;
     }
 }

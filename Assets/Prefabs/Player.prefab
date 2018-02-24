@@ -149,7 +149,7 @@ MonoBehaviour:
   boundary:
     xMin: -40
     xMax: 40
-    zMin: -40
+    zMin: -30
     zMax: 40
     playerHeight: 2
 --- !u!114 &114545109493044096

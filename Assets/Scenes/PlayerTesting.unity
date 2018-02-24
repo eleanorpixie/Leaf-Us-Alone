@@ -525,8 +525,6 @@ MonoBehaviour:
     zMin: 0
     zMax: 0
     playerHeight: 0
-  camera: {fileID: 0}
-  speed: 0
 --- !u!1001 &262077660
 Prefab:
   m_ObjectHideFlags: 0
@@ -995,16 +993,6 @@ Prefab:
     - target: {fileID: 1716235011697898, guid: 4f12a8a09bd1b4a1db750541436e4014, type: 2}
       propertyPath: m_Name
       value: Player (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114750303877881306, guid: 4f12a8a09bd1b4a1db750541436e4014,
-        type: 2}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 887325920}
-    - target: {fileID: 114750303877881306, guid: 4f12a8a09bd1b4a1db750541436e4014,
-        type: 2}
-      propertyPath: speed
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f12a8a09bd1b4a1db750541436e4014, type: 2}
