@@ -15,7 +15,7 @@ public class PointSystem : MonoBehaviour {
 
     private void Awake()
     {
-        //text = this.GetComponent<Text>();
+        //text = GetComponent<Text>();
         DontDestroyOnLoad(this);
     }
 

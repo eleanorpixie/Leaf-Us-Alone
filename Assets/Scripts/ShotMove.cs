@@ -26,7 +26,7 @@ public class ShotMove : MonoBehaviour {
         var z = this.transform.position.z;
 
         if (x > maxValueX || x < minValueX || z > maxValueZ || z < minValueZ)
-        {
+        { 
             Destroy(gameObject);
         }
 
