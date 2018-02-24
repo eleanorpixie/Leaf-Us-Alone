@@ -2,36 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAnimation : MonoBehaviour
-{    
-    private SpriteRenderer spr;
-    private Animator anim;
+public class EnemyAnimationFlip : MonoBehaviour {
+    
 
-    private Rigidbody rig;
-
-	private void Start () {
+	// Use this for initialization
+	void Start () {
         
-        spr = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
+        Vector3 Position = transform.position;
+        
 	}
 	
-	private void Update ()
-    {
-        if (this.transform.position.x < 0)
+	// Update is called once per frame
+	void Update () {
+        SpriteRenderer spr = gameObject.GetComponent<SpriteRenderer>();
+        if (gameObject.transform.position.x < 0)
         {
             spr.flipX = false;
         }
-        else if (this.transform.position.x > 0)
+        else if (gameObject.transform.position.x > 0)
         {
             spr.flipX = true;
-        }   
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Tree")
-        {
-            anim.SetBool("IsAttacking", true);
         }
     }
 }

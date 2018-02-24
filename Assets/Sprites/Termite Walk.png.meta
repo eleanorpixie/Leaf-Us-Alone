@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 5ccdc6ee848ea274db5c917f73520ae3
-timeCreated: 1519492525
+guid: c50d30a7ac81a6544bbb4f1ee06805f8
+timeCreated: 1519497184
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -49,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 1700
+  spritePixelsToUnits: 80
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -128,7 +128,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 940
+        width: 907
         height: 866
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -140,9 +140,9 @@ TextureImporter:
       name: Termite Walk_1
       rect:
         serializedVersion: 2
-        x: 940
+        x: 912
         y: 0
-        width: 940
+        width: 954
         height: 866
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -154,9 +154,9 @@ TextureImporter:
       name: Termite Walk_2
       rect:
         serializedVersion: 2
-        x: 1880
+        x: 1866
         y: 0
-        width: 940
+        width: 954
         height: 866
       alignment: 0
       pivot: {x: 0, y: 0}
