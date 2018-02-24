@@ -9,57 +9,49 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1554083322832436}
+  m_RootGameObject: {fileID: 1763306692913340}
   m_IsPrefabParent: 1
---- !u!1 &1554083322832436
+--- !u!1 &1763306692913340
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4445140375285528}
-  - component: {fileID: 212616704542406784}
-  - component: {fileID: 54765574491818026}
-  - component: {fileID: 65827247134772188}
-  - component: {fileID: 195219741502202482}
-  - component: {fileID: 114090579661089952}
-  - component: {fileID: 95263096269355850}
+  - component: {fileID: 4397449749614932}
+  - component: {fileID: 212019433631490996}
+  - component: {fileID: 54317199644486580}
+  - component: {fileID: 65365267426338460}
+  - component: {fileID: 195417853047418692}
+  - component: {fileID: 114215793885907104}
+  - component: {fileID: 95289539247827386}
+  - component: {fileID: 114454068349909502}
   m_Layer: 0
-  m_Name: Termite
+  m_Name: Termite 1
   m_TagString: termite1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4445140375285528
+--- !u!4 &4397449749614932
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554083322832436}
+  m_GameObject: {fileID: 1763306692913340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_LocalPosition: {x: -1.25, y: 2.19, z: -46.57}
-=======
   m_LocalPosition: {x: -1.25, y: 2.19, z: -13.07}
->>>>>>> 6b8b9ee587820ffde5d30ecc489722e76a32c30a
   m_LocalScale: {x: 5, y: 5, z: 1}
-=======
-  m_LocalPosition: {x: -1.25, y: 2.19, z: -13.07}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
->>>>>>> parent of c8b301d... scenes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54765574491818026
+--- !u!54 &54317199644486580
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554083322832436}
+  m_GameObject: {fileID: 1763306692913340}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -69,25 +61,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65827247134772188
+--- !u!65 &65365267426338460
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554083322832436}
+  m_GameObject: {fileID: 1763306692913340}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.3, z: 0.5}
+  m_Size: {x: 0.7, y: 0.7, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &95263096269355850
+--- !u!95 &95289539247827386
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554083322832436}
+  m_GameObject: {fileID: 1763306692913340}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f72fd678f105991489f399955e63152e, type: 2}
@@ -98,12 +90,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114090579661089952
+--- !u!114 &114215793885907104
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554083322832436}
+  m_GameObject: {fileID: 1763306692913340}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa781562611da6f4fb1fcb9c291b4455, type: 3}
@@ -111,30 +103,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   billboardMode: 1
-<<<<<<< HEAD
---- !u!114 &114196428320362864
+--- !u!114 &114454068349909502
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554083322832436}
+  m_GameObject: {fileID: 1763306692913340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
-  m_Script: {fileID: 11500000, guid: 5257519a1fe24d441856b4a9cf935b31, type: 3}
-=======
   m_Script: {fileID: 11500000, guid: 94e3fdf09b435424bbf2b26ae9f3c481, type: 3}
->>>>>>> 6b8b9ee587820ffde5d30ecc489722e76a32c30a
   m_Name: 
   m_EditorClassIdentifier: 
-=======
->>>>>>> parent of c8b301d... scenes
---- !u!195 &195219741502202482
+--- !u!195 &195417853047418692
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554083322832436}
+  m_GameObject: {fileID: 1763306692913340}
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
@@ -146,16 +131,16 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.2
-  m_BaseOffset: 0.1
+  m_Height: 0.5
+  m_BaseOffset: 0.25
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!212 &212616704542406784
+--- !u!212 &212019433631490996
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554083322832436}
+  m_GameObject: {fileID: 1763306692913340}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -184,22 +169,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: 5ccdc6ee848ea274db5c917f73520ae3, type: 3}
-<<<<<<< HEAD
-  m_Color: {r: 0.70980394, g: 0.5921569, b: 0.027450982, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> 6b8b9ee587820ffde5d30ecc489722e76a32c30a
-=======
-  m_Sprite: {fileID: 21300000, guid: c50d30a7ac81a6544bbb4f1ee06805f8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> parent of c8b301d... scenes
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
