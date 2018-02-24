@@ -24,7 +24,8 @@ GameObject:
   - component: {fileID: 65907849752299376}
   - component: {fileID: 195702387622554588}
   - component: {fileID: 114912946451338036}
-  - component: {fileID: 95866752305240244}
+  - component: {fileID: 95208129824118928}
+  - component: {fileID: 114180144907064842}
   m_Layer: 0
   m_Name: Lumberjack
   m_TagString: lumberjack1
@@ -39,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1161353956400218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.47, y: 3.33, z: -9.23}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalPosition: {x: 2.5, y: 2.5, z: -46.23}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +73,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &95866752305240244
+--- !u!95 &95208129824118928
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -89,6 +90,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114180144907064842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1161353956400218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5257519a1fe24d441856b4a9cf935b31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114912946451338036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,7 +123,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
-  m_Speed: 5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -119,8 +131,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.8
-  m_BaseOffset: 0.4
+  m_Height: 1
+  m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!212 &212557426169546854
@@ -157,7 +169,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: 072abd051fad3454b9675a8f5b2de9b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 072abd051fad3454b9675a8f5b2de9b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
