@@ -11,10 +11,12 @@ public class Schut : MonoBehaviour {
     private float nextFire;
     private int shotDirection;
 
-	// Use this for initialization
-	void Start ()
+    private Animator animAttack;
+
+    // Use this for initialization
+    void Start ()
     {
-		
+        animAttack = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -22,9 +24,10 @@ public class Schut : MonoBehaviour {
     {
 		if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
+            animAttack.SetBool("IsAttacking", true);
             nextFire = Time.time + fireRate;
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-
+            animAttack.SetBool("IsAttacking", false);
 
         }
 	}
